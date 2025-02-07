@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
       <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-          scrolled ? 'bg-black/90 backdrop-blur-lg py-3 border-b border-green-400/10' : 'bg-transparent py-6'
+          scrolled ? 'bg-black/90 backdrop-blur-lg py-3 border-b border-purple-400/10' : 'bg-transparent py-6'
       }`}>
         <div className="container mx-auto px-6">
           <nav className="flex justify-between items-center">
@@ -27,7 +27,7 @@ const Header = () => {
                 whileHover={{ scale: 1.05 }}
                 className="flex items-center space-x-2"
             >
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600 text-3xl font-bold tracking-wider">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600 text-3xl font-bold tracking-wider">
               TK
             </span>
               <div className="w-6 h-6  flex items-center justify-center">
@@ -41,15 +41,15 @@ const Header = () => {
                   <motion.a
                       key={item}
                       href={`#${item.toLowerCase().replace(' ', '-')}`}
-                      className="relative text-gray-300 hover:text-green-400 px-3 py-2 transition-colors duration-300 text-sm uppercase tracking-wider group"
+                      className="relative text-gray-300 hover:text-cyan-400 px-3 py-2 transition-colors duration-300 text-sm uppercase tracking-wider group"
                       whileHover={{ scale: 1.05 }}
                   >
                     {item}
-                    <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-green-400 transition-all duration-300 group-hover:w-full"></span>
+                    <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-purple-400 transition-all duration-300 group-hover:w-full"></span>
                   </motion.a>
               ))}
               <motion.button
-                  className="px-6 py-2 bg-gradient-to-r from-green-400/20 to-emerald-600/20 border border-green-400/30 text-green-400 rounded-full hover:bg-green-400/30 transition-all duration-300 text-sm uppercase tracking-wider relative overflow-hidden group"
+                  className="px-6 py-2 bg-gradient-to-r from-cyan-400/20 to-purple-600/20 border border-purple-400/30 text-purple-400 rounded-full hover:bg-cyan-400/30 transition-all duration-300 text-sm uppercase tracking-wider relative overflow-hidden group"
                   whileHover={{ scale: 1.05 }}
               >
                 <span className="relative z-10">Resume</span>
@@ -59,7 +59,7 @@ const Header = () => {
 
             {/* Mobile Menu Button */}
             <motion.button
-                className="md:hidden text-green-400 p-2 rounded-lg hover:bg-green-400/10 transition-colors"
+                className="md:hidden text-cyan-400 p-2 rounded-lg hover:bg-purple-400/10 transition-colors"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 whileTap={{ scale: 0.95 }}
             >
@@ -73,14 +73,14 @@ const Header = () => {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
-                  className="md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-lg border-t border-green-400/10"
+                  className="md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-lg border-t border-cyan-400/10"
               >
                 <div className="flex flex-col items-center py-6 space-y-6">
                   {navItems.map((item) => (
                       <motion.a
                           key={item}
                           href={`#${item.toLowerCase().replace(' ', '-')}`}
-                          className="text-gray-300 hover:text-green-400 px-4 py-2 transition-colors duration-300 text-sm uppercase tracking-wider"
+                          className="text-gray-300 hover:text-cyan-400 px-4 py-2 transition-colors duration-300 text-sm uppercase tracking-wider"
                           onClick={() => setIsMenuOpen(false)}
                           whileHover={{ scale: 1.05 }}
                       >
@@ -88,7 +88,7 @@ const Header = () => {
                       </motion.a>
                   ))}
                   <motion.button
-                      className="px-6 py-2 bg-gradient-to-r from-green-400/20 to-emerald-600/20 border border-green-400/30 text-green-400 rounded-full hover:bg-green-400/30 transition-all duration-300 text-sm uppercase tracking-wider"
+                      className="px-6 py-2 bg-gradient-to-r from-cyan-400/20 to-purple-600/20 border border-purple-400/30 text-cyan-400 rounded-full hover:bg-cyan-400/30 transition-all duration-300 text-sm uppercase tracking-wider"
                       whileHover={{ scale: 1.05 }}
                   >
                     Resume

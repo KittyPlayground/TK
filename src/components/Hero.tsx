@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
-import hero from '../../assets/t.jpg';
+import hero from '../../assets/tk.PNG';
 import { Parallax } from 'react-scroll-parallax';
 
 const Hero = () => {
@@ -35,12 +35,12 @@ const Hero = () => {
     }),
   };
 
-  const name = 'Kawodya WA'.split('');
+  const name = 'Kawodya Arachchige'.split('');
 
   return (
       <section id="home" className="min-h-screen bg-neutral-950 relative overflow-hidden">
         {/* Grid background */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNNjAgMEgwdjYwaDYweiIgZmlsbD0iIzAwMDAwMCIvPjxwYXRoIGQ9Ik02MCAwSDB2NjBoNjB6IiBzdHJva2U9IiMwMDAwMDAiLz48L2c+PC9zdmc+')] opacity-5" />
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNNjAgMEgwdjYwaDYweiIgZmlsbD0iIzAwMDAwMCIvPjxwYXRoIGQ9Ik02MCAwSDB2NjBoNjB6IiBzdHJva2U9IiMwMDAwMDAiLz48L2c+PC9zdmc+')] opacity-15" />
 
         <div className="container mx-auto px-4 pt-28 pb-12 flex flex-col md:flex-row items-center justify-between min-h-screen relative z-10">
           {/* Left content */}
@@ -109,24 +109,27 @@ const Hero = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8 }}
-                className="relative md:w-[500px] md:h-[600px] w-full mt-12 md:mt-0"
+                className="relative md:w-[400px] md:h-[400px] w-[250px] h-[250px] mt-12 md:mt-0" // Middle size
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/30 to-purple-400/30 blur-3xl rounded-3xl" />
-              <div className="relative z-10 h-full rounded-[2rem] overflow-hidden border-2 border-neutral-800/50 backdrop-blur-xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/30 to-purple-400/30 blur-3xl rounded-full" /> {/* Rounded gradient */}
+              <div className="relative z-10 h-full rounded-full overflow-hidden border-2 border-neutral-800/50 backdrop-blur-xl"> {/* Rounded container */}
                 <img
                     src={hero}
                     alt="Portrait"
-                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500 rounded-full" // Rounded image
                 />
               </div>
             </motion.div>
           </Parallax>
+
 
           {/* Social links */}
           <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1 }}
+              whileHover={{scale: 1.2, rotate: 10}}
+              whileTap={{scale: 0.9}}
               className="fixed left-8 bottom-8 flex flex-col gap-6"
           >
             {[

@@ -11,7 +11,6 @@
     @apply bg-black text-white font-light;
   }
 
-  /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
   }
@@ -21,25 +20,22 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-green-400/20 rounded-full;
+    @apply bg-purple-400/20 rounded-full;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-green-400/30;
+    @apply bg-purple-400/30;
   }
 }
 
-/* Gradient text effect */
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-emerald-400;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-400;
 }
 
-/* Glass effect */
 .glass-effect {
   @apply backdrop-blur-lg bg-white/5 border border-white/10;
 }
 
-/* Animated background */
 .animated-gradient {
   background: linear-gradient(
     45deg,
@@ -66,11 +62,8 @@
 .animated-gradient {
   background: linear-gradient(135deg, #000000, #1a1a1a);
 }
-
-
-
 .neon-text {
-  text-shadow: 0 0 5px #4ade80, 0 0 10px #4ade80, 0 0 20px #4ade80;
+  text-shadow: 0 0 5px #3fdfee, 0 0 10px #a475f3, 0 0 20px #3fdfee;
 }
 
 .neon-border {
@@ -113,20 +106,11 @@
 body {
   cursor: none;
 }
-
-/* Glass effect */
-.glass-effect {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
 /* Custom cursor */
 .custom-cursor {
   position: fixed;
   width: 24px;
   height: 24px;
-  background-color: #4ade80;
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
