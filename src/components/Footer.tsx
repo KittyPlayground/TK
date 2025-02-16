@@ -1,54 +1,49 @@
 import React from 'react';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowUp } from 'lucide-react';
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
-    <footer className="bg-black border-t border-green-400/10">
-      <div className="container mx-auto px-6 py-12">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-green-400 text-2xl font-light tracking-wider">
-            Mighty<span className="text-white">.</span>
-          </div>
-          
-          <div className="flex items-center gap-8">
-            <a href="#" className="text-gray-400 hover:text-green-400 transition-colors">About</a>
-            <a href="#" className="text-gray-400 hover:text-green-400 transition-colors">Projects</a>
-            <a href="#" className="text-gray-400 hover:text-green-400 transition-colors">Contact</a>
-          </div>
-          
-          <div className="flex gap-6">
-            <a 
-              href="#"
-              className="text-gray-400 hover:text-green-400 transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Github className="w-5 h-5" />
-            </a>
-            <a 
-              href="#"
-              className="text-gray-400 hover:text-green-400 transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a 
-              href="#"
-              className="text-gray-400 hover:text-green-400 transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Twitter className="w-5 h-5" />
-            </a>
-          </div>
+      <footer className="bg-neutral-900 text-neutral-400 py-12 relative">
+        <div className="container mx-auto px-4">
+          <motion.div
+              initial={{opacity: 0, y: 20}}
+              whileInView={{opacity: 1, y: 0}}
+              transition={{duration: 0.8}}
+              className="text-center mb-8"
+          >
+            <p className="text-lg italic bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            "The only way to do great work is to love what you do." – Steve Jobs
+           </p>
+          </motion.div>
+          <motion.div
+              initial={{opacity: 0, y: 20}}
+              whileInView={{opacity: 1, y: 0}}
+              transition={{duration: 0.8, delay: 0.2 }}
+              className="text-center"
+          >
+            <p className="text-sm">
+              &copy; {new Date().getFullYear()} Kawodya Arachchige. All rights reserved.
+            </p>
+          </motion.div>
+          <motion.button
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              onClick={scrollToTop}
+              className="absolute bottom-8 right-8 p-3 bg-neutral-800 rounded-full text-neutral-400 hover:text-cyan-400 hover:bg-neutral-700 transition-all"
+          >
+            <ArrowUp className="w-5 h-5" />
+          </motion.button>
         </div>
-        
-        <div className="mt-12 pt-8 border-t border-green-400/10 text-center text-gray-400">
-          <p>© {new Date().getFullYear()} Mighty. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
+      </footer>
   );
 };
 

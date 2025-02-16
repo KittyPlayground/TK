@@ -1,86 +1,84 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Mail, MessageSquare } from 'lucide-react';
 
 const Contact = () => {
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.215, 0.61, 0.355, 1]
+      }
+    }
+  };
+
   return (
-      <section id="contact" className="bg-black py-20">
+      <section id="contact" className="bg-black py-32">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-light text-white text-center mb-4">Let's Talk</h2>
-            <p className="text-gray-400 text-center mb-12">Have a project in mind? Let's create something amazing
-              together.</p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              <div className="space-y-8">
-                <div className="flex items-center gap-4">
-                  <div className="p-4 bg-green-400/10 text-green-400 rounded-full">
-                    <Mail className="w-6 h-6"/>
-                  </div>
-                  <div>
-                    <h3 className="text-white text-lg mb-1">Email</h3>
-                    <a href="mailto:contact@example.com"
-                       className="text-gray-400 hover:text-green-400 transition-colors">
-                      contact@example.com
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <div className="p-4 bg-green-400/10 text-green-400 rounded-full">
-                    <Phone className="w-6 h-6"/>
-                  </div>
-                  <div>
-                    <h3 className="text-white text-lg mb-1">Phone</h3>
-                    <a href="tel:+15551234567" className="text-gray-400 hover:text-green-400 transition-colors">
-                      +1 (555) 123-4567
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <div className="p-4 bg-green-400/10 text-green-400 rounded-full">
-                    <MapPin className="w-6 h-6"/>
-                  </div>
-                  <div>
-                    <h3 className="text-white text-lg mb-1">Location</h3>
-                    <p className="text-gray-400">San Francisco, CA</p>
-                  </div>
-                </div>
-              </div>
-
-              <form className="space-y-6">
-                <div>
-                  <input
-                      type="text"
-                      placeholder="Your Name"
-                      className="w-full px-6 py-4 bg-green-400/5 border border-green-400/20 text-white rounded-lg focus:outline-none focus:border-green-400 transition-colors"
-                  />
-                </div>
-                <div>
-                  <input
-                      type="email"
-                      placeholder="Your Email"
-                      className="w-full px-6 py-4 bg-green-400/5 border border-green-400/20 text-white rounded-lg focus:outline-none focus:border-green-400 transition-colors"
-                  />
-                </div>
-                <div>
-                <textarea
-                    placeholder="Your Message"
-                    rows={4}
-                    className="w-full px-6 py-4 bg-green-400/5 border border-green-400/20 text-white rounded-lg focus:outline-none focus:border-green-400 transition-colors resize-none"
-                ></textarea>
-                </div>
-                <button
-                    type="submit"
-                    className="w-full px-6 py-4 bg-green-400 text-black rounded-lg hover:bg-green-500 transition-colors flex items-center justify-center gap-2"
+          <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              className="max-w-4xl mx-auto text-center"
+          >
+            {/* Handshake Icon */}
+            <div className="mb-8 flex justify-center">
+              <div className="w-16 h-16 rounded-full bg-green-400/10 flex items-center justify-center">
+                <svg
+                    className="w-8 h-8 text-green-400"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 >
-                  Send Message
-                  <Send className="w-4 h-4"/>
-                </button>
-              </form>
+                  <path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"></path>
+                </svg>
+              </div>
             </div>
-          </div>
+
+            <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="text-5xl font-light text-white mb-8"
+            >
+              Tell me about your next project
+            </motion.h2>
+
+            <div className="flex justify-center gap-4 mt-12">
+              <motion.a
+                  href="kawodya.wa@gmail.com"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-green-400 text-black rounded-full hover:bg-green-500 transition-colors"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+              >
+                <Mail className="w-4 h-4" />
+                Email Me
+              </motion.a>
+
+              <motion.a
+                  href="https://wa.me/1234567890"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white/5 text-white rounded-full hover:bg-white/10 transition-colors"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+              >
+                <MessageSquare className="w-4 h-4" />
+                WhatsApp
+              </motion.a>
+            </div>
+          </motion.div>
         </div>
+
+        {/* Background Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-400/5 to-transparent pointer-events-none"></div>
       </section>
   );
 };
