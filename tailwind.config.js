@@ -11,6 +11,9 @@ export default {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         light: ['Inter Light', 'system-ui', 'sans-serif'],
+        mono: ['Fira Code', 'monospace'],
+        roboto: ['Roboto', 'system-ui', 'sans-serif'],
+
       },
       animation: {
         'gradient': 'gradient 15s ease infinite',

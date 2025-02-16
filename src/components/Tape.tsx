@@ -14,14 +14,32 @@ const words = [
     "Interactive",
     "Search Optimized",
     "Usable",
+    "Efficient",
+    "Fast",
+    "Lightweight",
+    "Easy to use",
+    "Composable",
+    "Customizable",
+    "Modular",
+    "Scalable",
+    "Secure",
+    "Accessible",
+    "User Friendly",
+    "Maintainable",
+    "Interactive",
+    "Search Optimized",
+    "Usable",
+    "Efficient",
+    "Fast",
+    "Lightweight",
 ];
 
 export const Tape = () => {
     return (
         <div className="py-1 lg:py-4 overflow-x-clip">
-            <div className=" bg-gradient-to-r from-cyan-300 to-purple-400  -rotate-1 -mx-1">
+            <div className=" bg-gradient-to-r from-pink-700 to-purple-400  -rotate-1 -mx-1">
                 <div className="flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-                    <div className="flex flex-none gap-4 py-3 animate-move-left [animation-duration:30s]">
+                    <div className="flex flex-none gap-4 py-3 animate-move-left [animation-duration:3s]">
                         {[...new Array(2)].fill(0).map((_, idx) => (
                             <Fragment key={idx}>
                                 {words.map((word) => (

@@ -2,7 +2,7 @@ import React, {useState, useEffect, useCallback} from "react";
 import {motion, AnimatePresence} from "framer-motion";
 import {Menu, X} from "lucide-react";
 import {useLocation, useNavigate} from "react-router-dom";
-import loading from "./Loading.tsx";
+
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,7 +28,7 @@ const Header = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, [handleScroll]);
 
-    const navItems = ["Home", "About", "Tech Stack", "Creating", "Contact"];
+    const navItems = ["Home", "About", "Tech Stack", "Projects", "Contact"];
 
     const navigate = useNavigate();
 

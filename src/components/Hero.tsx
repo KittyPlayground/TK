@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import { motion } from 'framer-motion';
-import {Facebook, Twitter, Linkedin, Github, Mail} from 'lucide-react';
+import {Facebook, Twitter, Linkedin, Github, Mail, Dribbble} from 'lucide-react';
 
 const Hero = () => {
   const letterVariants = {
@@ -114,6 +114,7 @@ const Hero = () => {
               {[
                 {icon: <Github className="w-6 h-6"/>, link: '#'},
                 {icon: <Linkedin className="w-6 h-6"/>, link: '#'},
+                {icon: <Dribbble className="w-6 h-6"/>, link: '#'},
               ].map((social, index) => (
                   <motion.a
                       key={index}

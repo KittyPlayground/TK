@@ -40,7 +40,7 @@ const About = () => {
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div variants={itemVariants} className="space-y-8">
-                <h2 className="text-4xl font-light">
+                <h2 className="text-4xl font-light ">
                   <span className="text-purple-400">WHO I AM?</span>
                 </h2>
 
