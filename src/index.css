@@ -34,8 +34,8 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .gradient-text {
@@ -68,23 +68,7 @@
     background-position: 0% 50%;
   }
 }
-/* Add these styles to your global CSS file (e.g., index.css or App.css) */
-.animated-gradient {
-  background: linear-gradient(135deg, #000000, #1a1a1a);
-}
-.neon-text {
-  text-shadow: 0 0 5px #3fdfee, 0 0 10px #a475f3, 0 0 20px #3fdfee;
-}
 
-.neon-border {
-  box-shadow: 0 0 5px #4ade80, 0 0 10px #4ade80, 0 0 20px #4ade80;
-}
-
-.gradient-text {
-  background: linear-gradient(45deg, #4ade80, #f5df72);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 .glitch {
   position: relative;

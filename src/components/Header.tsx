@@ -18,7 +18,6 @@ const Header = () => {
         return () => clearTimeout(timer);
     }, []);
 
-    // Optimize scroll listener with useCallback
     const handleScroll = useCallback(() => {
         setScrolled(window.pageYOffset > 50);
     }, []);
